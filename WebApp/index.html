@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Итоги 2025</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка с предупреждением -->
+        <div class="header">
+            <div class="warning">
+                ⚠️ Опрос можно пройти только 1 раз.
+                <button id="aboutBtn" class="about-btn">about</button>
+            </div>
+            <h1>Итоги 2025</h1>
+            <p class="subtitle">Ваши ответы останутся анонимными</p>
+        </div>
+
+        <!-- Форма опроса -->
+        <form id="pollForm" class="poll-form">
+            <!-- Вопрос 1 -->
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-number">1</span>
+                    <h3 class="question-title">Самый/ая умный/ая</h3>
+                </div>
+                <input type="text" 
+                       class="answer-input" 
+                       placeholder="Введите, например, имя, фамилию и класс..."
+                       data-question="Самый/ая умный/ая"
+                       data-question="q1"
+                       required>
+            </div>
+
+            <!-- Вопрос 2 -->
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-number">2</span>
+                    <h3 class="question-title">Самый сильный</h3>
+                </div>
+                <input type="text" 
+                       class="answer-input" 
+                       placeholder="Введите, например, имя, фамилию и класс..."
+                       data-question="Самый сильный"
+                       data-question="q2"
+                       required>
+            </div>
+
+            <!-- Вопрос 3 -->
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-number">3</span>
+                    <h3 class="question-title">Самая красивая</h3>
+                </div>
+                <input type="text" 
+                       class="answer-input" 
+                       placeholder="Введите, например, имя, фамилию и класс..."
+                       data-question="Самая красивая"
+                       data-question="q3"
+                       required>
+            </div>
+
+            <!-- Вопрос 4 -->
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-number">4</span>
+                    <h3 class="question-title">Самый лучший класс</h3>
+                </div>
+                <input type="text" 
+                       class="answer-input" 
+                       placeholder="Например: 11А, 9Б..."
+                       data-question="Самый лучший класс"
+                       data-question="q4"
+                       required>
+            </div>
+
+            <!-- Вопрос 5 -->
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-number">5</span>
+                    <h3 class="question-title">Самый крутой учитель</h3>
+                </div>
+                <input type="text" 
+                       class="answer-input" 
+                       placeholder="Введите ФИО..."
+                       data-question="Самый крутой учитель"
+                       data-question="q5"
+                       required>
+            </div>
+
+            <!-- Вопрос 6 -->
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-number">6</span>
+                    <h3 class="question-title">Человек года</h3>
+                </div>
+                <input type="text" 
+                       class="answer-input" 
+                       placeholder="Введите имя или никнейм..."
+                       data-question="Человек года"
+                       data-question="q6"
+                       required>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <span class="btn-text">Отправить ответы</span>
+                <span class="btn-icon">📤</span>
+            </button>
+        </form>
+
+        <!-- Модальное окно about -->
+        <div id="aboutModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>О приложении</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Как это работает:</strong></p>
+                    <ul>
+                        <li>Заполните все поля формы</li>
+                        <li>Нажмите "Отправить ответы"</li>
+                        <li>Ваши ответы будут отправлены анонимно</li>
+                        <li>Опрос можно пройти только один раз</li>
+                    </ul>
+                    <p><strong>Итоги:</strong></p>
+                    <p>Результаты опроса будут опубликованы после завершения сбора ответов (команда about в боте).</p>
+                    <p class="contact">По вопросам: спросите друзей(^///^)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Уведомления -->
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
