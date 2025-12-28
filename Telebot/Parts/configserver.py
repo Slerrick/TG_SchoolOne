@@ -1,4 +1,4 @@
-BOT_TOKEN = "Your token:)"
+BOT_TOKEN = "8580641171:AAGkM1il2VaT0H-VBjMKlHvsBr-ET9zI9cI"
 ABOUT = """
 Если все ок и голосование окончено, то бот отправит результаты голосования в чат.
 """
